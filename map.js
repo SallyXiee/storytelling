@@ -899,3 +899,21 @@ map.on('mouseleave', 'warehousePM25', () => {
     map._pm25Popup = null;
   }
 });
+
+// 📍 让小视频、小图片滑到时出现，滑走时消失
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.4  // 露出40%就触发
+});
+
+// 观察所有的 scroll-item
+document.querySelectorAll('.scroll-item').forEach(item => {
+  observer.observe(item);
+});

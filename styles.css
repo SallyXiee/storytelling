@@ -284,5 +284,12 @@ body {
   z-index: 30;           /* 保证在长图上方显示 */
 }
 
+.floating-item {
+  position: absolute;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  border-radius: 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  border: 8px double black; /* 双黑线 */
+}
 
-  

@@ -364,6 +364,25 @@ var config = {
         <div id="long-scroll-container" style="position: relative; width: 100%; min-height: 200vh; overflow: hidden; background-color: white;">
           <img src="images/flushingstreet.png" id="long-scroll-image"
             style="position: relative; width: 100%; height: auto; margin-top: 0px; opacity: 0; transition: opacity 5s ease;">
+        
+        <video class="floating-item" style="top: 200px; left: 20%; width: 500px;" controls>
+          <source src="sitephotos/IMG_9468.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <img src="sitephotos/IMG_9461.jpg" class="floating-item" style="top: 1000px; left: 20%; width: 500px;">
+
+        <audio class="floating-item" style="top: 1600px; left: 18%; width: 400px;" controls>
+          <source src="sitephotos/34-12 Linneaus Pl copy.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <img src="sitephotos/IMG_9462.jpg" class="floating-item" style="top: 2000px; left: 20%; width: 500px;">
+        <img src="sitephotos/IMG_9467.jpg" class="floating-item" style="top: 3000px; left: 20%; width: 500px;">
+        <img src="sitephotos/IMG_9561.HEIC" class="floating-item" style="top: 3500px; left: 20%; width: 500px;">
+
+
+
         </div>
 
         `,
