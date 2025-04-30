@@ -442,6 +442,7 @@ map.on("load", function () {
       "circle-opacity": 0,
       "circle-stroke-color": "#ffffff",
       "circle-stroke-width": 0.3,
+      "circle-stroke-opacity": 0,
       "circle-radius": [
         "interpolate", ["linear"],
         ["coalesce", ["to-number", ["get", "RBA"]], 0],
@@ -470,6 +471,7 @@ map.on("load", function () {
       "circle-opacity": 0,
       "circle-stroke-color": "#ffffff",
       "circle-stroke-width": 0.3,
+      "circle-stroke-opacity": 0,
       "circle-radius": [
         "interpolate", ["linear"],
         ["coalesce", ["to-number", ["get", "RBA"]], 0],
@@ -660,11 +662,52 @@ fetch("data/warehouse.geojson")
     }
   });
 
+  map.addLayer({
+    id: "comments-layer",
+    type: "circle",
+    source: {
+      type: "geojson",
+      data: "data/comments.geojson"
+    },
+    paint: {
+      "circle-radius": 6,
+      "circle-color": [
+        "match",
+        ["get", "marker_icon_alt"],
+        
+        // 🫁 Public Health
+        "Health & Environmental Impact", "#8390CA",
+  
+        // 🛡️ Safety Issues
+        "Observed Pedestrian and Truck Conflict", "#C0E0DB",
+        "Observed Bicyclist and Truck Conflict", "#C0E0DB",
+        "Narrow Roadway", "#C0E0DB",
+  
+        // 🚛 Truck Traffic & Misbehavior
+        "Weight & Height Restriction", "#fed9be",
+        "Missing Truck Route Signage", "#fed9be",
+        "Confusing Truck Route Signage", "#fed9be",
+        "Difficult Truck Turn", "#fed9be",
+        "Speeding Trucks", "#fed9be",
+        "Maintenance Needed", "#fed9be",
+        "Limited Curb Access for Trucks", "#fed9be",
+        "Limited Truck Parking", "#fed9be",
+        "Poor Truck Network Connections", "#fed9be",
+  
+        // 其他默认
+        "#999999"
+      ],
+      "circle-opacity": 0, // 初始隐藏，滚动到章节时打开
+      "circle-stroke-opacity": 0
+    }
+  });
+
+
   map.addSource('flushing-warehouse', {
     type: 'geojson',
     data: 'data/flushingwarehouse.geojson' // 确保你把文件放在 data/ 文件夹
   });
-  
+
   // 📍 添加立体小楼图层，初始时隐藏
   map.addLayer({
     id: 'flushing-warehouse-layer',
@@ -917,3 +960,11 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.scroll-item').forEach(item => {
   observer.observe(item);
 });
+
+
+function showWhiteBackground() {
+  const mapDiv = document.getElementById("map");
+  if (mapDiv) {
+    mapDiv.style.display = "none";
+  }
+}
