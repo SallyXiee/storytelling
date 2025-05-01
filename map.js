@@ -702,6 +702,7 @@ fetch("data/warehouse.geojson")
     }
   });
 
+  
 
   map.addSource('flushing-warehouse', {
     type: 'geojson',
@@ -846,6 +847,7 @@ map.addLayer(
         if (person) {
           person.style.display = 'block';  // ✅ 滑到 long-scroll 时出现
         }
+        observeFloatingItems();  // ✅ 这里触发监听
       }      
 
       if (chapter.callback) {
@@ -967,4 +969,22 @@ function showWhiteBackground() {
   if (mapDiv) {
     mapDiv.style.display = "none";
   }
+}
+
+function observeFloatingItems() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.4  // 元素露出 40% 就触发
+  });
+
+  document.querySelectorAll('.scroll-item').forEach(item => {
+    observer.observe(item);
+  });
 }

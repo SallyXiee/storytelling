@@ -47,7 +47,7 @@ let divChapter7 =
   '<img src="images/AADTheatmap.png">' +
   "<p>Warehouses don’t operate in isolation — they draw in trucks.</p>" +
   "<p>As e-commerce reshaped the physical distribution network, the city also experienced a rise in truck traffic volume along key routes.</p>" +
-  "<p>Heatmaps of Annual Average Daily Truck Traffic (AADT) reveal a strong spatial correlation: areas with dense warehouse clusters also see the heaviest truck flows.</p>";
+  "<p>Heatmaps of  <span style='color:#ED1111; '>Annual Average Daily Truck Traffic (AADT)</span> reveal a strong spatial correlation: areas with dense warehouse clusters also see the heaviest truck flows.</p>";
 
 let divChapter2 =
   "<h3>Who Lives Near These Warehouses?</h3>" +
@@ -413,21 +413,64 @@ var config = {
           <img src="images/flushingstreet.png" id="long-scroll-image"
             style="position: relative; width: 100%; height: auto; margin-top: 0px; opacity: 0; transition: opacity 5s ease;">
         
-        <video class="floating-item" style="top: 200px; left: 20%; width: 500px;" controls>
+        <video class="floating-item scroll-item" style="top: 200px; left: 20%; width: 500px; border: 8px double black;" controls>
           <source src="sitephotos/IMG_9468.MOV" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="floating-caption scroll-item" style="top: 510px; left: 20%;">
+          <p>
+          It's a mix of commercial, residential, and warehouse neighborhoods where trucks can be seen parked in the street.
+         </p>
+        </div>
 
-        <img src="sitephotos/IMG_9461.jpg" class="floating-item" style="top: 1000px; left: 20%; width: 500px;">
+        <img src="sitephotos/IMG_9462.jpg" class="floating-item scroll-item" style="top: 770px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 1080px; left: 20%;">
+          <p>
+          The streets are full of trucks.
+         </p>
+        </div>
 
-        <audio class="floating-item" style="top: 1600px; left: 18%; width: 400px;" controls>
+        
+        <img src="sitephotos/IMG_9561.jpg" class="floating-item scroll-item" style="top: 1385px; left: 20%; width: 500px;  border: 8px double black">
+        <audio class="floating-item scroll-item" style="top: 1685px; left: 18%; width: 400px;" controls>
           <source src="sitephotos/34-12 Linneaus Pl copy.m4a" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+        <div class="floating-caption scroll-item" style="top: 1795px; left: 20%;">
+          <p>
+          Q: Do you often have trucks passing by here? Is there a lot of noise?
+         </p>
+         <p>
+          A: Yes, there are trucks. We've gotten used to it.
+         </p>
+         <p>
+          Q: Around what time do they usually come?
+         </p>
+         <p>
+          A: I’m not really sure — trucks are just coming and going all the time. Once, a truck from the store right in front of me even overturned and exploded.
+         </p>
+        </div>
 
-        <img src="sitephotos/IMG_9462.jpg" class="floating-item" style="top: 2000px; left: 20%; width: 500px;">
-        <img src="sitephotos/IMG_9467.jpg" class="floating-item" style="top: 3000px; left: 20%; width: 500px;">
-        <img src="sitephotos/IMG_9561.HEIC" class="floating-item" style="top: 3500px; left: 20%; width: 500px;">
+        <img src="sitephotos/IMG_9461.jpg" class="floating-item scroll-item" style="top: 2400px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 2710px; left: 20%;">
+          <p>
+          Lorries occupy the road from time to time to pile up goods.
+         </p>
+        </div>
+
+        <img src="sitephotos/IMG_9568.jpg" class="floating-item scroll-item" style="top: 3850px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 4180px; left: 20%;">
+          <p>
+          Trucks waiting to go into the warehouse.
+         </p>
+        </div>
+
+        <img src="sitephotos/IMG_9576.jpg" class="floating-item scroll-item" style="top: 4400px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 4720px; left: 20%;">
+          <p>
+          Barricade the unloading area.
+         </p>
+        </div>
 
 
 
@@ -446,6 +489,7 @@ var config = {
         ],
         onChapterExit: [{ callback: "fadeOutLongScrollImage" }]
       },      
+      
       
       
   ],
