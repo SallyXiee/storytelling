@@ -15,7 +15,7 @@ let descriptionDiv =
   '<p style="text-align:center">Scroll to continue<br>▼</p>';
 
 let footerDiv =
-  '<p>This story is based on data by the <a href="http://web.mta.info/developers/turnstile.html">Metropolitan Transit Authority</a> and reporting by the <a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">New York Times</a>, <a href="https://ny.curbed.com/2020/3/24/21192454/coronavirus-nyc-transportation-subway-citi-bike-covid-19">Curbed</a>, and <a href="https://thecity.nyc/2020/03/subway-ridership-plunge-deepest-at-big-manhattan-stations.html">The City</a>.</p>' +
+  '<p>This was done in the spring semester of the Cornell MSAUD program in a DATA course directed by Juan.</p>' +
   '<p><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a></p>';
 
 let divChapter0 =
@@ -423,20 +423,20 @@ var config = {
          </p>
         </div>
 
-        <img src="sitephotos/IMG_9462.jpg" class="floating-item scroll-item" style="top: 770px; left: 20%; width: 500px;  border: 8px double black">
-        <div class="floating-caption scroll-item" style="top: 1080px; left: 20%;">
+        <img src="sitephotos/IMG_9462.jpg" class="floating-item scroll-item" style="top: 950px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 1260px; left: 20%;">
           <p>
           The streets are full of trucks.
          </p>
         </div>
 
         
-        <img src="sitephotos/IMG_9561.jpg" class="floating-item scroll-item" style="top: 1385px; left: 20%; width: 500px;  border: 8px double black">
-        <audio class="floating-item scroll-item" style="top: 1685px; left: 18%; width: 400px;" controls>
+        <img src="sitephotos/IMG_9561.jpg" class="floating-item scroll-item" style="top: 1635px; left: 20%; width: 500px;  border: 8px double black">
+        <audio class="floating-item scroll-item" style="top: 1935px; left: 18%; width: 400px;" controls>
           <source src="sitephotos/34-12 Linneaus Pl copy.m4a" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <div class="floating-caption scroll-item" style="top: 1795px; left: 20%;">
+        <div class="floating-caption scroll-item" style="top: 2045px; left: 20%;">
           <p>
           Q: Do you often have trucks passing by here? Is there a lot of noise?
          </p>
@@ -451,22 +451,22 @@ var config = {
          </p>
         </div>
 
-        <img src="sitephotos/IMG_9461.jpg" class="floating-item scroll-item" style="top: 2400px; left: 20%; width: 500px;  border: 8px double black">
-        <div class="floating-caption scroll-item" style="top: 2710px; left: 20%;">
+        <img src="sitephotos/IMG_9461.jpg" class="floating-item scroll-item" style="top: 2720px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 3030px; left: 20%;">
           <p>
           Lorries occupy the road from time to time to pile up goods.
          </p>
         </div>
 
-        <img src="sitephotos/IMG_9568.jpg" class="floating-item scroll-item" style="top: 3850px; left: 20%; width: 500px;  border: 8px double black">
-        <div class="floating-caption scroll-item" style="top: 4180px; left: 20%;">
+        <img src="sitephotos/IMG_9568.jpg" class="floating-item scroll-item" style="top: 4450px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 4780px; left: 20%;">
           <p>
           Trucks waiting to go into the warehouse.
          </p>
         </div>
 
-        <img src="sitephotos/IMG_9576.jpg" class="floating-item scroll-item" style="top: 4400px; left: 20%; width: 500px;  border: 8px double black">
-        <div class="floating-caption scroll-item" style="top: 4720px; left: 20%;">
+        <img src="sitephotos/IMG_9576.jpg" class="floating-item scroll-item" style="top: 5000px; left: 20%; width: 500px;  border: 8px double black">
+        <div class="floating-caption scroll-item" style="top: 5320px; left: 20%;">
           <p>
           Barricade the unloading area.
          </p>
@@ -485,9 +485,12 @@ var config = {
         },
         mapAnimation: "flyTo",
         onChapterEnter: [
-          { callback: "fadeInLongScrollImage" }
+          { callback: "fadeInLongScrollImage" },
+          { callback: "showWhiteBackground" }  // 👈 添加这一行
         ],
-        onChapterExit: [{ callback: "fadeOutLongScrollImage" }]
+        onChapterExit: [{ callback: "fadeOutLongScrollImage" }
+
+        ]
       },      
       
       
