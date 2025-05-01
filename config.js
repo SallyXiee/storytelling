@@ -310,6 +310,7 @@ var config = {
         { layer: "flushing-warehouse-layer", opacity: 0 }, 
         { layer: "flushing-housing-layer", opacity: 0 },
         { layer: "prince-street-line", opacity: 0 },
+        { layer: "truckRouteLines", opacity: 0 },     // 黑色描边，实心
         { layer: "comments-layer", opacity: 0 }
       ],
       onChapterExit: [
@@ -339,7 +340,8 @@ var config = {
         { layer: "flushing-warehouse-layer", opacity: 1 },  // ✅ 小楼出现
         { layer: "flushing-housing-layer", opacity: 1 },
         { layer: "prince-street-fill", opacity: 0 },     // 灰色填充，半透明
-        { layer: "prince-street-outline", opacity: 0 }     // 黑色描边，实心
+        { layer: "prince-street-outline", opacity: 0 } ,    // 黑色描边，实心
+        { layer: "truckRouteLines", opacity: 0.5 }     // 黑色描边，实心
       ],
       onChapterExit: []
     },
@@ -362,6 +364,7 @@ var config = {
       mapAnimation: "flyTo",
       rotateAnimation: false,
       onChapterEnter: [
+        { layer: "truckRouteLines", opacity: 0.5 },    // 黑色描边，实心
         { layer: "flushing-warehouse-layer", opacity: 1 },
         { layer: "flushing-housing-layer", opacity: 1 },
         { layer: "prince-street-fill", opacity: 0.5 },     // 灰色填充，半透明
@@ -390,6 +393,7 @@ var config = {
       },
       mapAnimation: "flyTo",
       onChapterEnter: [
+        { layer: "truckRouteLines", opacity: 0 },     // 黑色描边，实心
         { layer: "flushing-warehouse-layer", opacity: 0 },
         { layer: "flushing-housing-layer", opacity: 0 },
         { layer: "prince-street-fill", opacity: 0 },
